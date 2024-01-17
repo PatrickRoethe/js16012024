@@ -1,5 +1,6 @@
 export default [
   {
+    //Category 1
     id: 1,
     name: "Iphone 15",
     price: 10000,
@@ -26,7 +27,8 @@ export default [
     price: 10003,
     category: 1,
   },
-  // SNORRE comment: Added some more date with different categories
+
+  // Category 2
   {
     id: 4,
     name: "Samsung Galaxy S4",
@@ -39,6 +41,43 @@ export default [
     price: 9000,
     category: 2,
   },
+
+  {
+    id: 4,
+    name: "Samsung Note 4.5",
+    price: 9000,
+    category: 2,
+  },
+
+  {
+    id: 4,
+    name: "Samsung Note 5",
+    price: 9000,
+    category: 2,
+  },
+
+  // Category 3
+  {
+    id: 4,
+    name: "Nokia",
+    price: 200,
+    category: 3,
+  },
+
+  {
+    id: 4,
+    name: "Nokia",
+    price: 200,
+    category: 3,
+  },
+
+  {
+    id: 4,
+    name: "Nokia",
+    price: 200,
+    category: 3,
+  },
+
   {
     id: 4,
     name: "Nokia",
