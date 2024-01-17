@@ -44,9 +44,9 @@ h1 {
     /* width: 100%; denne bestemmer hvor bredt product skal bre seg */
 }
 
-.product img {
-
-}
+/* .product img {
+  
+} */
 
 .active-heart  {
     fill: red;
