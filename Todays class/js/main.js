@@ -7,12 +7,32 @@ const categoriesContainer = document.querySelector("main");
 // Step 3: Create a variable to store the HTML markup for categories
 let categoriesHTML = "";
 
+// SNORRE comment: Here is a function that checks how many categories there are in the data.
+function countCategories(data) {
+  const uniqueCategories = new Set();
+  
+  data.forEach(item => {
+    uniqueCategories.add(item.category);
+  });
+
+  return uniqueCategories.size;
+}
+
+// SNORRE comment: Here we are using the function to create a variable that contains how many categories there are in "productsData"
+const numberOfCategories = countCategories(productsData);
+
 // Step 4: Loop through each category and generate HTML markup
-for (let categoryIndex = 1; categoryIndex <= 3; categoryIndex++) {
+// SNORRE comment: Here we are using the "numberOfCategories" so that the for-loop will auto adjust to the data (if there are 3 categories in the data file, it will loop 3 times)
+for (let categoryIndex = 1; categoryIndex <= numberOfCategories; categoryIndex++) {
   // Generate HTML markup for each product in the category
   let productsHTML = "";
+
   for (let i = 0; i < productsData.length; i++) {
-    productsHTML += `
+
+    // SNORRE comment: So inside this for-loop we want to only add the products that are in the current category.
+    // In the if statement below we are comparing the product category to the categoryIndex to ensure we only include the products we want in each category
+    if (productsData[i].category === categoryIndex) {
+      productsHTML += `
       <div class="product">
         <img alt="random photo" src="https://picsum.photos/200" />
         <h3>${productsData[i].name}</h3>
@@ -27,6 +47,7 @@ for (let categoryIndex = 1; categoryIndex <= 3; categoryIndex++) {
         </span>
       </div>
     `;
+    }
   }
 
   // Generate HTML markup for the category with the products
