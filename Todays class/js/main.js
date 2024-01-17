@@ -1,34 +1,47 @@
 // Step 1: Import product data from external source (products.js)
 import productsData from "./data/products.js";
-console.log("products: ", productsData);
 
-// Step 2: Select the container in the HTML where products will be displayed
-const productsContainer = document.querySelector(".products-container");
+// Step 2: Select the container in the HTML where categories will be displayed
+const categoriesContainer = document.querySelector("main");
 
-// Step 3: Create a variable to store the HTML markup for products
-let productsHTML = "";
+// Step 3: Create a variable to store the HTML markup for categories
+let categoriesHTML = "";
 
-// Step 4: Generate HTML markup for each product and accumulate it in the variable
-for (let i = 0; i < productsData.length; i++) {
-  productsHTML += `
-    <div class="product">
-      <img alt="random photo" src="https://picsum.photos/200" />
-      <h3>${productsData[i].name}</h3>
-      <h4>NOK ${productsData[i].price}</h4>
-      <span class="heart-container">
-        <svg class="heart"
-          xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-          fill="none" stroke="#000000"
-          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-        </svg>
-      </span>
-    </div>
+// Step 4: Loop through each category and generate HTML markup
+for (let categoryIndex = 1; categoryIndex <= 3; categoryIndex++) {
+  // Generate HTML markup for each product in the category
+  let productsHTML = "";
+  for (let i = 0; i < productsData.length; i++) {
+    productsHTML += `
+      <div class="product">
+        <img alt="random photo" src="https://picsum.photos/200" />
+        <h3>${productsData[i].name}</h3>
+        <h4>NOK ${productsData[i].price}</h4>
+        <span class="heart-container">
+          <svg class="heart"
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" stroke="#000000"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </span>
+      </div>
+    `;
+  }
+
+  // Generate HTML markup for the category with the products
+  categoriesHTML += `
+    <section class="category">
+      <h1>Category: ${categoryIndex}</h1>
+      <div class="products-container">
+        ${productsHTML}
+      </div>
+    </section>
   `;
 }
 
-// Step 5: Append the accumulated HTML markup to the products container
-productsContainer.innerHTML = productsHTML;
+// Step 5: Append the accumulated HTML markup to the categories container
+categoriesContainer.innerHTML = categoriesHTML;
 
 // Step 6: Select all elements with the class "heart"
 const favourites = document.querySelectorAll(".heart");
