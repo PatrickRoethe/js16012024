@@ -1,54 +1,72 @@
+/* Reset CSS */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+/* Body Styles */
 body {
     margin: 0;
     background-color: #ebebeb;
     font-family: Monaco, serif;
 }
 
-
+/* Header Styles */
 header {
     background-color: #BADA55;
     padding: 1rem;
-}
-
-header ul {
-    list-style-type:none;
     display: flex;
-    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header ul a {
+nav {
+    display: flex;
+    flex-grow: 1; /* Ensure nav takes up available space */
+}
+
+nav a {
+    padding: 1rem 1.5rem; /* Adjust padding for better spacing */
     text-decoration: none;
-    color:black;
-    font-size: 1.5rem;
+    color: black;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
+nav a:hover {
+    background-color: #8fb4e5; /* Add a hover effect */
+}
+
+ul {
+    list-style: none; 
+    display: flex;
+}
+
+/* Main Content Styles */
 h1 {
     font-size: 1.5rem;
 }
 
+/* Products Container Styles */
 .products-container {
     display: flex;
     gap: 1rem;
     padding: 1rem;
+    justify-content: center;
 }
 
+/* Product Styles */
 .product {
-    background-color:teal;
+    background-color: teal;
     border-radius: 1rem;
-    padding: .5rem;
+    padding: 0.5rem;
     color: white;
-    /* width: 100%; denne bestemmer hvor bredt product skal bre seg */
+    cursor: pointer;
 }
 
-/* .product img {
-  
-} */
-
-.active-heart  {
+/* Active Heart Styles */
+.active-heart {
     fill: red;
     stroke: black;
 }
