@@ -59,7 +59,7 @@ h1 {
 
 /* Product Styles */
 .product {
-    background-color: teal;
+    background-color: rgb(67, 67, 230);
     border-radius: 1rem;
     padding: 0.5rem;
     color: white;
