@@ -1,5 +1,6 @@
 // Step 1: Import product data from external source (products.js)
 import productsData from "./data/products.js";
+import "./slider.js";
 
 // Step 2: Select the container in the HTML where categories will be displayed
 const categoriesContainer = document.querySelector("main");
