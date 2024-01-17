@@ -26,4 +26,23 @@ export default [
     price: 10003,
     category: 1,
   },
+  // SNORRE comment: Added some more date with different categories
+  {
+    id: 4,
+    name: "Samsung Galaxy S4",
+    price: 8000,
+    category: 2,
+  },
+  {
+    id: 4,
+    name: "Samsung Note 4",
+    price: 9000,
+    category: 2,
+  },
+  {
+    id: 4,
+    name: "Nokia",
+    price: 200,
+    category: 3,
+  },
 ];
