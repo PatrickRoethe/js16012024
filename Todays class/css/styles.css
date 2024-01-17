@@ -15,7 +15,7 @@ body {
 /* Header Styles */
 header {
     background-color: #BADA55;
-    padding: 1rem;
+    padding: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
