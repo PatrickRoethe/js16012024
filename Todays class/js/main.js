@@ -1,13 +1,14 @@
+// Step 1: Import product data from external source (products.js)
 import productsData from "./data/products.js";
 console.log("products: ", productsData);
 
-// 1. Select the products container
+// Step 2: Select the container in the HTML where products will be displayed
 const productsContainer = document.querySelector(".products-container");
 
-// 2. Create a variable to store the HTML markup
+// Step 3: Create a variable to store the HTML markup for products
 let productsHTML = "";
 
-// 3. Fill the variable with the products HTML markup
+// Step 4: Generate HTML markup for each product and accumulate it in the variable
 for (let i = 0; i < productsData.length; i++) {
   productsHTML += `
     <div class="product">
@@ -26,19 +27,19 @@ for (let i = 0; i < productsData.length; i++) {
   `;
 }
 
-// 4. Append the products HTML markup to the products container
+// Step 5: Append the accumulated HTML markup to the products container
 productsContainer.innerHTML = productsHTML;
 
-// 5. Check if any of the FAV btns hearts clicked
+// Step 6: Select all elements with the class "heart"
 const favourites = document.querySelectorAll(".heart");
 
-// 6. Loop on the DOM elements selected (hearts, all the elements with class heart)
+// Step 7: Loop through each heart element and add a click event listener
 for (let heart of favourites) {
   heart.addEventListener("click", function () {
     // Toggle the "active-heart" class for visual indication
     this.classList.toggle("active-heart");
 
-    // Save the clicked state in local storage
+    // Step 8: Save the clicked state in local storage
     const heartIndex = Array.from(favourites).indexOf(this);
     const savedState = localStorage.getItem("heartStates")
       ? JSON.parse(localStorage.getItem("heartStates"))
@@ -46,18 +47,18 @@ for (let heart of favourites) {
     savedState[heartIndex] = this.classList.contains("active-heart");
     localStorage.setItem("heartStates", JSON.stringify(savedState));
 
-    // Log the data saved in local storage
+    // Log the data saved in local storage for debugging purposes
     console.log("Saved state in local storage:", savedState);
   });
 }
 
-// 7. Retrieve saved state from local storage on page load
+// Step 9: Retrieve saved state from local storage on page load
 document.addEventListener("DOMContentLoaded", function () {
   const savedState = localStorage.getItem("heartStates")
     ? JSON.parse(localStorage.getItem("heartStates"))
     : [];
 
-  // 8. Apply the saved state to visually indicate clicked hearts
+  // Step 10: Apply the saved state to visually indicate clicked hearts
   savedState.forEach((isHeartActive, index) => {
     if (isHeartActive) {
       favourites[index].classList.add("active-heart");
