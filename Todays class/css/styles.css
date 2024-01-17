@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #ebebeb;
+    font-family: Monaco, serif;
+}
+
+
+header {
+    background-color: #BADA55;
+    padding: 1rem;
+}
+
+header ul {
+    list-style-type:none;
+    display: flex;
+    gap: 1rem;
+}
+
+header ul a {
+    text-decoration: none;
+    color:black;
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+.products-container {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.product {
+    background-color:teal;
+    border-radius: 1rem;
+    padding: .5rem;
+    color: white;
+    /* width: 100%; denne bestemmer hvor bredt product skal bre seg */
+}
+
+.product img {
+
+}
+
+.active-heart  {
+    fill: red;
+    stroke: black;
+}
