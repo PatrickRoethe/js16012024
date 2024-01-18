@@ -1,0 +1,10 @@
+/* Product Slider Styles */
+.product-slider {
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the slider */
+}
+
+.product-slider img {
+    width: 100%; /* Make images fill the slide container */
+    border-radius: 8px; /* Add border radius for a rounded appearance */
+}

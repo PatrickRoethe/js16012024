@@ -59,28 +59,28 @@ export default [
   // Category 3
   {
     id: 4,
-    name: "Nokia",
+    name: "Nokia 0.5",
     price: 200,
     category: 3,
   },
 
   {
     id: 4,
-    name: "Nokia",
+    name: "Nokia 1",
     price: 200,
     category: 3,
   },
 
   {
     id: 4,
-    name: "Nokia",
+    name: "Nokia 2",
     price: 200,
     category: 3,
   },
 
   {
     id: 4,
-    name: "Nokia",
+    name: "Nokia 3",
     price: 200,
     category: 3,
   },

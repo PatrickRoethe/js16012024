@@ -45,6 +45,9 @@ for (
           <h4>NOK ${productsData[i].price}</h4>
           <span class="heart-container">
             <svg class="heart"
+            data-name="${productsData[i].name}"
+            data-id="${productsData[i].price}"
+            data-price="${productsData[i].price}" 
               xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
               fill="none" stroke="#000000"
               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -55,6 +58,8 @@ for (
       `;
     }
   }
+
+  // Unødvendig?  med data-names
 
   // Generate HTML markup for the category with the products
   categoriesHTML += `
